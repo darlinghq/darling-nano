@@ -56,6 +56,8 @@ target_link_libraries(nano ncurses)
 
 install(TARGETS nano
 	DESTINATION libexec/darling/usr/bin)
-install(FILES nanorc
-	DESTINATION share/darling)
 
+install(FILES nanorc DESTINATION libexec/darling/etc)
+
+install(FILES doc/nano.1 doc/rnano.1 DESTINATION libexec/darling/usr/share/man/man1)
+install(FILES doc/nanorc.5 DESTINATION libexec/darling/usr/share/man/man5)
