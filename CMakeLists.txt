@@ -13,16 +13,6 @@ add_definitions(-DSYSCONFDIR="${CMAKE_INSTALL_PREFIX}/share/darling")
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -U_POSIX_C_SOURCE -D__DARWIN_UNIX03 -nostdinc -fblocks -fPIC -ggdb -O0")
 
-include_directories(${DARLING_TOP_DIRECTORY}/src/libc/include/FreeBSD)
-include_directories(${DARLING_TOP_DIRECTORY}/src/libc/include/NetBSD)
-include_directories(${DARLING_TOP_DIRECTORY}/src/libc/gen)
-include_directories(${DARLING_TOP_DIRECTORY}/src/libc/darwin)
-include_directories(${DARLING_TOP_DIRECTORY}/src/libc/stdtime/FreeBSD)
-include_directories(${DARLING_TOP_DIRECTORY}/src/launchd/liblaunch)
-include_directories(${DARLING_TOP_DIRECTORY}/src/external/libdispatch)
-include_directories(${DARLING_TOP_DIRECTORY}/src/external/zlib)
-include_directories(${DARLING_TOP_DIRECTORY}/src/external/bzip2)
-include_directories(${DARLING_TOP_DIRECTORY}/src/ncurses/include)
 include_directories(BEFORE ${CMAKE_CURRENT_SOURCE_DIR})
 
 include(InstallSymlink)
