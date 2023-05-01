@@ -9,7 +9,7 @@ endif(COMMAND cmake_policy)
 
 include(darling_exe)
 add_definitions(-DHAVE_CONFIG_H)
-add_definitions(-DSYSCONFDIR="${CMAKE_INSTALL_PREFIX}/share/darling")
+add_definitions(-DSYSCONFDIR="/etc")
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -U_POSIX_C_SOURCE -D__DARWIN_UNIX03 -nostdinc -fblocks -fPIC -ggdb -O0")
 
